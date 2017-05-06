@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="novelViewer.ItemDetailPage" 
+    Title="{Binding Title}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <WebView Grid.Row="0" x:Name="browser"/>
+        
+        <StackLayout Grid.Row="1"
+            Spacing="20" Padding="15">
+            <Label Text="{Binding Item.Text}" FontSize="Medium" />
+            <Label Text="{Binding Item.Description}" FontSize="Small" />
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>
